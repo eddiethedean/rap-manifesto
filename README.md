@@ -36,10 +36,10 @@ Packages prefixed with **`rap`** stand for **Real Async Python**. This is a **co
 
 | Package | Purpose | Status |
 |---------|---------|--------|
-| **[rapfiles](https://github.com/rap-project/rapfiles)** | True async filesystem I/O | ✅ Available |
-| **[rapsqlite](https://github.com/rap-project/rapsqlite)** | True async SQLite | ✅ Available |
-| **[rapcsv](https://github.com/rap-project/rapcsv)** | Streaming async CSV | ✅ Available |
-| **[rap-bench](https://github.com/rap-project/rap-bench)** | Fake Async Detector CLI | ✅ Available |
+| **[rapfiles](https://github.com/eddiethedean/rapfiles)** | True async filesystem I/O | ✅ Available |
+| **[rapsqlite](https://github.com/eddiethedean/rapsqlite)** | True async SQLite | ✅ Available |
+| **[rapcsv](https://github.com/eddiethedean/rapcsv)** | Streaming async CSV | ✅ Available |
+| **[rap-bench](https://github.com/eddiethedean/rap-bench)** | Fake Async Detector CLI | ✅ Available |
 
 If a package bears the `rap` prefix, it guarantees:
 - ✅ **Measurable concurrency** under load
@@ -55,7 +55,7 @@ If a package bears the `rap` prefix, it guarantees:
 
 ## Benchmarks
 
-Benchmarks are available in the [rap-bench](https://github.com/rap-project/rap-bench) repository. All RAP packages must pass the **Fake Async Detector**, which:
+Benchmarks are available in the [rap-bench](https://github.com/eddiethedean/rap-bench) repository. All RAP packages must pass the **Fake Async Detector**, which:
 
 1. Launches **1 blocking or slow task**
 2. Launches **100–1000 concurrent I/O tasks**
@@ -79,11 +79,11 @@ rap-bench detect rapcsv
 
 | Repository | Purpose | PyPI Package |
 |------------|---------|--------------|
-| [rap-manifesto](https://github.com/rap-project/rap-manifesto) | Philosophy, guarantees, benchmarks | N/A |
-| [rap-bench](https://github.com/rap-project/rap-bench) | Fake Async Detector CLI | [`rap-bench`](https://pypi.org/project/rap-bench/) |
-| [rapfiles](https://github.com/rap-project/rapfiles) | True async filesystem I/O | [`rapfiles`](https://pypi.org/project/rapfiles/) |
-| [rapsqlite](https://github.com/rap-project/rapsqlite) | True async SQLite | [`rapsqlite`](https://pypi.org/project/rapsqlite/) |
-| [rapcsv](https://github.com/rap-project/rapcsv) | Streaming async CSV | [`rapcsv`](https://pypi.org/project/rapcsv/) |
+| [rap-manifesto](https://github.com/eddiethedean/rap-manifesto) | Philosophy, guarantees, benchmarks | N/A |
+| [rap-bench](https://github.com/eddiethedean/rap-bench) | Fake Async Detector CLI | [`rap-bench`](https://pypi.org/project/rap-bench/) |
+| [rapfiles](https://github.com/eddiethedean/rapfiles) | True async filesystem I/O | [`rapfiles`](https://pypi.org/project/rapfiles/) |
+| [rapsqlite](https://github.com/eddiethedean/rapsqlite) | True async SQLite | [`rapsqlite`](https://pypi.org/project/rapsqlite/) |
+| [rapcsv](https://github.com/eddiethedean/rapcsv) | Streaming async CSV | [`rapcsv`](https://pypi.org/project/rapcsv/) |
 
 ## Quick Start
 
@@ -105,10 +105,10 @@ rap-bench detect rapfiles
 
 Contributions to the RAP ecosystem are welcome! Each repository has its own contributing guidelines:
 
-- [rapfiles](https://github.com/rap-project/rapfiles)
-- [rapsqlite](https://github.com/rap-project/rapsqlite)
-- [rapcsv](https://github.com/rap-project/rapcsv)
-- [rap-bench](https://github.com/rap-project/rap-bench)
+- [rapfiles](https://github.com/eddiethedean/rapfiles)
+- [rapsqlite](https://github.com/eddiethedean/rapsqlite)
+- [rapcsv](https://github.com/eddiethedean/rapcsv)
+- [rap-bench](https://github.com/eddiethedean/rap-bench)
 
 ## License
 
