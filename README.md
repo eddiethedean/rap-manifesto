@@ -8,6 +8,17 @@
 
 RAP (Real Async Python) is an ecosystem of Python packages backed by native runtimes (primarily Rust) that provide **provably non-blocking, GIL-independent async I/O**. RAP exists to correct widespread misuse of the term "async" in Python by defining async behavior **by measurable outcomes**, not syntax.
 
+## The Problem: Fake Async
+
+Many popular Python "async" libraries like `aiofiles`, `aiocsv`, and `aiosqlite` use `async`/`await` syntax but aren't truly async. They wrap blocking I/O operations in thread pools, which means:
+
+- Your event loop can still stall under load
+- I/O operations still block threads, just in a pool
+- It's async syntax, not async behavior
+- Performance degrades under contention
+
+RAP provides true async alternatives that execute I/O operations **outside the Python GIL** using native async runtimes (Rust + Tokio), ensuring your event loop never stalls, even under heavy load.
+
 ## Core Principles
 
 ### 1. Behavioral Async
@@ -34,12 +45,14 @@ RAP (Real Async Python) is an ecosystem of Python packages backed by native runt
 
 Packages prefixed with **`rap`** stand for **Real Async Python**. This is a **contract**, not marketing:
 
-| Package | Purpose | Status |
-|---------|---------|--------|
-| **[rapfiles](https://github.com/eddiethedean/rapfiles)** | True async filesystem I/O | ✅ Available |
-| **[rapsqlite](https://github.com/eddiethedean/rapsqlite)** | True async SQLite | ✅ Available |
-| **[rapcsv](https://github.com/eddiethedean/rapcsv)** | Streaming async CSV | ✅ Available |
-| **[rap-bench](https://github.com/eddiethedean/rap-bench)** | Fake Async Detector CLI | ✅ Available |
+| Package | Purpose | Status | Goal |
+|---------|---------|--------|------|
+| **[rapfiles](https://github.com/eddiethedean/rapfiles)** | True async filesystem I/O | 🚧 Early Beta (MVP v0.0.1) | Drop-in replacement for `aiofiles` |
+| **[rapsqlite](https://github.com/eddiethedean/rapsqlite)** | True async SQLite | 🚧 Early Beta (MVP v0.0.1) | Drop-in replacement for `aiosqlite` |
+| **[rapcsv](https://github.com/eddiethedean/rapcsv)** | Streaming async CSV | 🚧 Early Beta (MVP v0.0.1) | Drop-in replacement for `aiocsv` |
+| **[rap-bench](https://github.com/eddiethedean/rap-bench)** | Fake Async Detector CLI | ✅ Available | Benchmarking tool |
+
+**Current Status**: All RAP packages are in early beta (MVP v0.0.1) with core functionality working and verified to pass the Fake Async Detector. We're actively working toward drop-in compatibility with their `aio*` equivalents. See each package's README for current limitations and ROADMAP for planned improvements.
 
 If a package bears the `rap` prefix, it guarantees:
 - ✅ **Measurable concurrency** under load
@@ -101,9 +114,25 @@ rap-bench list
 rap-bench detect rapfiles
 ```
 
+## Vision & Roadmap
+
+Our goal is to provide true async alternatives to popular Python async libraries, starting with:
+
+- **rapfiles** → `aiofiles` alternative
+- **rapsqlite** → `aiosqlite` alternative  
+- **rapcsv** → `aiocsv` alternative
+
+Each package follows a phased development approach, with the ultimate goal of achieving drop-in replacement compatibility while providing provably superior async performance. We're building this ecosystem with a focus on:
+
+1. **Credibility** - Proving true async behavior through benchmarks
+2. **Compatibility** - Enabling seamless migration from existing libraries
+3. **Performance** - Delivering measurable improvements under load
+
+See each package's ROADMAP for detailed development plans.
+
 ## Contributing
 
-Contributions to the RAP ecosystem are welcome! Each repository has its own contributing guidelines:
+Contributions to the RAP ecosystem are welcome! This is a young project with big ambitions, and we'd love to have you join us on this journey. Each repository has its own contributing guidelines:
 
 - [rapfiles](https://github.com/eddiethedean/rapfiles)
 - [rapsqlite](https://github.com/eddiethedean/rapsqlite)
