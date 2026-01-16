@@ -47,12 +47,12 @@ Packages prefixed with **`rap`** stand for **Real Async Python**. This is a **co
 
 | Package | Purpose | Status | Goal |
 |---------|---------|--------|------|
-| **[rapfiles](https://github.com/eddiethedean/rapfiles)** | True async filesystem I/O | 🚧 Early Beta (MVP v0.0.1) | Drop-in replacement for `aiofiles` |
-| **[rapsqlite](https://github.com/eddiethedean/rapsqlite)** | True async SQLite | 🚧 Early Beta (MVP v0.0.1) | Drop-in replacement for `aiosqlite` |
-| **[rapcsv](https://github.com/eddiethedean/rapcsv)** | Streaming async CSV | 🚧 Early Beta (MVP v0.0.1) | Drop-in replacement for `aiocsv` |
+| **[rapfiles](https://github.com/eddiethedean/rapfiles)** | True async filesystem I/O | ✅ Phase 1 Complete (v0.1.1) | Drop-in replacement for `aiofiles` |
+| **[rapsqlite](https://github.com/eddiethedean/rapsqlite)** | True async SQLite | ✅ Phase 1 Complete (v0.1.1) | Drop-in replacement for `aiosqlite` |
+| **[rapcsv](https://github.com/eddiethedean/rapcsv)** | Streaming async CSV | ✅ Phase 1 Complete (v0.1.1) | Drop-in replacement for `aiocsv` |
 | **[rap-bench](https://github.com/eddiethedean/rap-bench)** | Fake Async Detector CLI | ✅ Available | Benchmarking tool |
 
-**Current Status**: All RAP packages are in early beta (MVP v0.0.1) with core functionality working and verified to pass the Fake Async Detector. We're actively working toward drop-in compatibility with their `aio*` equivalents. See each package's README for current limitations and ROADMAP for planned improvements.
+**Current Status**: All RAP packages have completed Phase 1 (v0.1.1) with core functionality stable and production-ready. All packages support Python 3.8 through 3.13 and are verified to pass the Fake Async Detector. We're actively working toward full drop-in compatibility with their `aio*` equivalents. See each package's README for current status, limitations, and ROADMAP for planned improvements.
 
 If a package bears the `rap` prefix, it guarantees:
 - ✅ **Measurable concurrency** under load
