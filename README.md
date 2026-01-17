@@ -47,18 +47,18 @@ Packages prefixed with **`rap`** stand for **Real Async Python**. This is a **co
 
 | Package | Purpose | Status | Goal |
 |---------|---------|--------|------|
-| **[rapfiles](https://github.com/eddiethedean/rapfiles)** | True async filesystem I/O | ✅ v0.1.0 (Phase 1 Complete) | Drop-in replacement for `aiofiles` |
-| **[rapsqlite](https://github.com/eddiethedean/rapsqlite)** | True async SQLite | ✅ v0.1.0 (Phase 1 Complete) | Drop-in replacement for `aiosqlite` |
-| **[rapcsv](https://github.com/eddiethedean/rapcsv)** | Streaming async CSV | ✅ v0.1.0 (Phase 1 Complete) | Drop-in replacement for `aiocsv` |
+| **[rapfiles](https://github.com/eddiethedean/rapfiles)** | True async filesystem I/O | ✅ Phase 1 Complete (v0.1.1) | Drop-in replacement for `aiofiles` |
+| **[rapsqlite](https://github.com/eddiethedean/rapsqlite)** | True async SQLite | ✅ Phase 1 Complete (v0.1.1) | Drop-in replacement for `aiosqlite` |
+| **[rapcsv](https://github.com/eddiethedean/rapcsv)** | Streaming async CSV | ✅ Phase 1 Complete (v0.1.1) | Drop-in replacement for `aiocsv` |
 | **[rap-bench](https://github.com/eddiethedean/rap-bench)** | Fake Async Detector CLI | ✅ Available | Benchmarking tool |
 
-**Current Status**: All three core RAP packages have reached **v0.1.0** with Phase 1 complete! This milestone includes:
+**Current Status**: All three core RAP packages have reached **v0.1.1** with Phase 1 complete! This milestone includes:
 
-- **rapfiles v0.1.0**: Complete aiofiles compatibility with file handles, directory operations, path utilities, metadata support, and comprehensive test coverage
-- **rapsqlite v0.1.0**: Full connection lifecycle, transactions, cursor API, enhanced error handling, and aiosqlite-compatible API
-- **rapcsv v0.1.0**: Streaming CSV reading/writing, context manager support, aiocsv compatibility aliases, and comprehensive test suite
+- **rapfiles v0.1.1**: Complete aiofiles compatibility with file handles, directory operations, path utilities, metadata support, and comprehensive test coverage
+- **rapsqlite v0.1.1**: Full connection lifecycle, transactions, cursor API, enhanced error handling, and aiosqlite-compatible API
+- **rapcsv v0.1.1**: Streaming CSV reading/writing, context manager support, aiocsv compatibility aliases, and comprehensive test suite
 
-All packages are verified to pass the Fake Async Detector and provide true async, GIL-independent I/O. See each package's README for detailed feature lists and ROADMAP for planned Phase 2 improvements.
+All packages support Python 3.8 through 3.13, are verified to pass the Fake Async Detector, and provide true async, GIL-independent I/O. See each package's README for detailed feature lists and ROADMAP for planned Phase 2 improvements.
 
 If a package bears the `rap` prefix, it guarantees:
 - ✅ **Measurable concurrency** under load
