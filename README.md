@@ -47,12 +47,18 @@ Packages prefixed with **`rap`** stand for **Real Async Python**. This is a **co
 
 | Package | Purpose | Status | Goal |
 |---------|---------|--------|------|
-| **[rapfiles](https://github.com/eddiethedean/rapfiles)** | True async filesystem I/O | 🚧 Early Beta (MVP v0.0.1) | Drop-in replacement for `aiofiles` |
-| **[rapsqlite](https://github.com/eddiethedean/rapsqlite)** | True async SQLite | 🚧 Early Beta (MVP v0.0.1) | Drop-in replacement for `aiosqlite` |
-| **[rapcsv](https://github.com/eddiethedean/rapcsv)** | Streaming async CSV | 🚧 Early Beta (MVP v0.0.1) | Drop-in replacement for `aiocsv` |
+| **[rapfiles](https://github.com/eddiethedean/rapfiles)** | True async filesystem I/O | ✅ v0.1.0 (Phase 1 Complete) | Drop-in replacement for `aiofiles` |
+| **[rapsqlite](https://github.com/eddiethedean/rapsqlite)** | True async SQLite | ✅ v0.1.0 (Phase 1 Complete) | Drop-in replacement for `aiosqlite` |
+| **[rapcsv](https://github.com/eddiethedean/rapcsv)** | Streaming async CSV | ✅ v0.1.0 (Phase 1 Complete) | Drop-in replacement for `aiocsv` |
 | **[rap-bench](https://github.com/eddiethedean/rap-bench)** | Fake Async Detector CLI | ✅ Available | Benchmarking tool |
 
-**Current Status**: All RAP packages are in early beta (MVP v0.0.1) with core functionality working and verified to pass the Fake Async Detector. We're actively working toward drop-in compatibility with their `aio*` equivalents. See each package's README for current limitations and ROADMAP for planned improvements.
+**Current Status**: All three core RAP packages have reached **v0.1.0** with Phase 1 complete! This milestone includes:
+
+- **rapfiles v0.1.0**: Complete aiofiles compatibility with file handles, directory operations, path utilities, metadata support, and comprehensive test coverage
+- **rapsqlite v0.1.0**: Full connection lifecycle, transactions, cursor API, enhanced error handling, and aiosqlite-compatible API
+- **rapcsv v0.1.0**: Streaming CSV reading/writing, context manager support, aiocsv compatibility aliases, and comprehensive test suite
+
+All packages are verified to pass the Fake Async Detector and provide true async, GIL-independent I/O. See each package's README for detailed feature lists and ROADMAP for planned Phase 2 improvements.
 
 If a package bears the `rap` prefix, it guarantees:
 - ✅ **Measurable concurrency** under load
