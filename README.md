@@ -58,7 +58,7 @@ Packages prefixed with **`rap`** stand for **Real Async Python**. This is a **co
 - **rapsqlite v0.1.1**: Full connection lifecycle, transactions, cursor API, enhanced error handling, and aiosqlite-compatible API
 - **rapcsv v0.1.1**: Streaming CSV reading/writing, context manager support, aiocsv compatibility aliases, and comprehensive test suite
 
-All packages support Python 3.8 through 3.13, are verified to pass the Fake Async Detector, and provide true async, GIL-independent I/O. See each package's README for detailed feature lists and ROADMAP for planned Phase 2 improvements.
+All packages support Python 3.8 through 3.14, are verified to pass the Fake Async Detector, and provide true async, GIL-independent I/O. See each package's README for detailed feature lists and ROADMAP for planned Phase 2 improvements.
 
 If a package bears the `rap` prefix, it guarantees:
 - ✅ **Measurable concurrency** under load
